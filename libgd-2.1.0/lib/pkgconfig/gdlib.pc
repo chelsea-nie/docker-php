@@ -1,0 +1,11 @@
+prefix=/data/service/libgd-2.1.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gd
+Description: GD graphics library
+Version: 2.1.0
+Cflags: -I${includedir}
+Libs.private: -ljpeg -lz -lm  -L/data/service/libpng-1.6.9/lib -lpng16 -L/data/service/freetype-2.4.0/lib -lfreetype 
+Libs: -L${libdir} -lgd
